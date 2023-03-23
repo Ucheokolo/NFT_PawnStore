@@ -1,0 +1,47 @@
+{
+  "description": "Aitch5Store collections",
+  "external_url": "Alchemy.com/?a=roadtoweb3weekone",
+  "image": "https://ipfs.filebase.io/ipfs/QmPUn8wbTsvrkfWHpYa5QCZRhpLwdMFA7nH8sAVsYffNJ1",
+  "name": "Carlo",
+  "attributes": [
+    {
+      "trait_type": "Base",
+      "value": "Grenache"
+    },
+    {
+      "trait_type": "Taste",
+      "value": "SourSweet"
+    },
+    {
+      "trait_type": "Color",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Amount",
+      "value": 1
+    },
+    {
+      "trait_type": "Size",
+      "value": 5.7
+    },
+    {
+      "trait_type": "Personality",
+      "value": "RichOnly"
+    },
+    {
+      "display_type": "boost_number",
+      "trait_type": "Year",
+      "value": 1970
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Tipsy_Mild",
+      "value": 5
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Generation",
+      "value": 2
+    }
+  ]
+}
