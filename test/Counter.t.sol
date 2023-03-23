@@ -7,9 +7,11 @@ import "../src/PawnShop.sol";
 contract CounterTest is Test {
     Aitch5Store public pawnStore;
     address owner = mkaddr("owner");
+    // address usdtHolder = "0x29131A0c8DFeD19DDe84D36104800caCA7b73B98";
     address firstBuyer = mkaddr("firstBuyer");
-    string uri =
+    string nftUri =
         "https://ipfs.filebase.io/ipfs/QmT7n7uhNABHRSXW5MTDgpokp7Upwq9DhWsrg486wSkCoe";
+    IERC20 purchaseToken = IERC20(0xdAC17F958D2ee523a2206206994597C13D831ec7);
 
     function setUp() public {
         // counter = new Counter();
@@ -17,21 +19,15 @@ contract CounterTest is Test {
         pawnStore = new Aitch5Store();
     }
 
-    function purchaseItem() public {
-        vm.startPrank(firstBuyer);
+    function testpurchaseItem() public {
+        vm.startPrank(0x29131A0c8DFeD19DDe84D36104800caCA7b73B98);
         pawnStore.getUsdtEth();
-        pawnStore.purchaseItem(_contractAddr, _uri);
+        console.log(
+            purchaseToken.balanceOf(0x29131A0c8DFeD19DDe84D36104800caCA7b73B98)
+        );
+        // purchaseToken.approve(address(pawnStore), 5 ether);
+        // pawnStore.purchaseItem(address(pawnStore), nftUri);
     }
-
-    // function testIncrement() public {
-    //     counter.increment();
-    //     assertEq(counter.number(), 1);
-    // }
-
-    // function testSetNumber(uint256 x) public {
-    //     counter.setNumber(x);
-    //     assertEq(counter.number(), x);
-    // }
 
     function mkaddr(string memory name) public returns (address) {
         address addr = address(
